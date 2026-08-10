@@ -1,6 +1,6 @@
 # From Zero to MiniGPT
 
-Construindo modelos de Inteligência Artificial do zero, desde os fundamentos matemáticos até um pequeno modelo de linguagem baseado na arquitetura Transformer.
+Construindo modelos de Inteligência Artificial do zero, desde a matemática básica até um pequeno modelo de linguagem baseado na arquitetura Transformer.
 
 O objetivo deste repositório não é apenas utilizar bibliotecas prontas ou consumir APIs de modelos existentes. A proposta é compreender, implementar, testar e documentar os principais componentes envolvidos na construção de modelos modernos de IA.
 
@@ -12,14 +12,17 @@ Responder, na prática, à seguinte pergunta:
 
 O projeto combina quatro frentes em cada etapa:
 
-1. **Matemática:** compreender e derivar as equações principais.
+1. **Matemática:** compreender as operações e derivar as equações principais.
 2. **Implementação:** transformar os conceitos em código, começando com Python e NumPy.
 3. **Experimentação:** modificar parâmetros, provocar falhas e medir o comportamento.
 4. **Documentação:** registrar resultados, limitações, erros e aprendizados.
 
+A matemática será estudada de forma incremental e aplicada. O projeto não exige dominar cálculo ou álgebra linear antes de começar: a base será reconstruída dentro do próprio roadmap.
+
 ## Roadmap
 
-- [ ] Fundamentos matemáticos computacionais
+- [ ] Matemática básica para IA: aritmética, álgebra, funções, gráficos, potências e logaritmos
+- [ ] Fundamentos matemáticos computacionais: vetores, matrizes, derivadas e probabilidade
 - [ ] Regressão linear do zero
 - [ ] Classificação e neurônio artificial
 - [ ] Rede neural multicamada e backpropagation
@@ -33,22 +36,39 @@ O projeto combina quatro frentes em cada etapa:
 - [ ] API, RAG, ferramentas, avaliações e segurança
 - [ ] Assistente técnico final para redes, infraestrutura ou cibersegurança
 
+O roadmap detalhado e suas dependências estão na [issue #1](https://github.com/vinionix/from-zero-to-minigpt/issues/1).
+
+## Fase -1 — Matemática básica para IA
+
+Antes da álgebra linear, o projeto reconstrói a base necessária para ler e manipular fórmulas com segurança:
+
+- aritmética, frações, razões e proporções;
+- álgebra básica e equações;
+- funções, plano cartesiano e leitura de gráficos;
+- potências, raízes e notação científica;
+- exponenciais e logaritmos;
+- somatórios, índices, média e notação matemática;
+- checkpoint prático aplicado a `y = wx + b`.
+
+O código nessa fase serve para **validar a matemática**, não para substituir o raciocínio manual.
+
 ## Estrutura planejada
 
 ```text
 from-zero-to-minigpt/
 ├── 00_project_foundations/
-├── 01_math_foundations/
-├── 02_linear_regression/
-├── 03_logistic_neuron/
-├── 04_mlp_backpropagation/
-├── 05_sequence_models/
-├── 06_embeddings/
-├── 07_self_attention/
-├── 08_transformer/
-├── 09_minigpt/
-├── 10_post_training/
-├── 11_llm_system/
+├── 01_basic_math/
+├── 02_math_foundations/
+├── 03_linear_regression/
+├── 04_logistic_neuron/
+├── 05_mlp_backpropagation/
+├── 06_sequence_models/
+├── 07_embeddings/
+├── 08_self_attention/
+├── 09_transformer/
+├── 10_minigpt/
+├── 11_post_training/
+├── 12_llm_system/
 ├── docs/
 ├── experiments/
 ├── tests/
