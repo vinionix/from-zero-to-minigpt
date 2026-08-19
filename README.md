@@ -2,13 +2,19 @@
 
 Construindo modelos de Inteligência Artificial do zero, desde a matemática básica até um pequeno modelo de linguagem baseado na arquitetura Transformer.
 
-O objetivo deste repositório não é apenas utilizar bibliotecas prontas ou consumir APIs de modelos existentes. A proposta é compreender, implementar, testar e documentar os principais componentes envolvidos na construção de modelos modernos de IA.
+O objetivo deste repositório não é apenas utilizar bibliotecas prontas ou consumir APIs de modelos existentes. A proposta é compreender, implementar, testar e documentar os principais componentes envolvidos na construção de modelos modernos de IA — e depois conectar esse conhecimento à engenharia de sistemas com LLMs.
 
-## Objetivo
+## Por que este projeto existe
 
-Responder, na prática, à seguinte pergunta:
+Quero responder, na prática, a duas perguntas:
 
-> Como um modelo de Inteligência Artificial aprende e como podemos construir um pequeno modelo de linguagem compreendendo cada uma de suas partes?
+> Como um modelo de Inteligência Artificial aprende?
+
+> O que é necessário para transformar esse conhecimento em um sistema de LLM testável, observável e seguro?
+
+Por isso, o projeto não começa em Transformers. Ele reconstrói a base matemática e computacional necessária para chegar até eles com entendimento real.
+
+## Método de trabalho
 
 O projeto combina quatro frentes em cada etapa:
 
@@ -17,7 +23,7 @@ O projeto combina quatro frentes em cada etapa:
 3. **Experimentação:** modificar parâmetros, provocar falhas e medir o comportamento.
 4. **Documentação:** registrar resultados, limitações, erros e aprendizados.
 
-A matemática será estudada de forma incremental e aplicada. O projeto não exige dominar cálculo ou álgebra linear antes de começar: a base será reconstruída dentro do próprio roadmap.
+Uma etapa só é tratada como concluída quando consigo explicar o conceito, resolver um caso pequeno manualmente, implementar, testar e analisar suas limitações.
 
 ## Roadmap
 
@@ -37,6 +43,32 @@ A matemática será estudada de forma incremental e aplicada. O projeto não exi
 - [ ] Assistente técnico final para redes, infraestrutura ou cibersegurança
 
 O roadmap detalhado e suas dependências estão na [issue #1](https://github.com/vinionix/from-zero-to-minigpt/issues/1).
+
+## Fluxo técnico planejado
+
+```text
+Matemática básica
+      ↓
+Álgebra linear + derivadas + probabilidade
+      ↓
+Regressão e classificação
+      ↓
+MLP + backpropagation
+      ↓
+Modelos sequenciais
+      ↓
+Embeddings
+      ↓
+Self-attention
+      ↓
+Transformer decoder-only
+      ↓
+MiniGPT
+      ↓
+Post-training
+      ↓
+RAG + ferramentas + avaliações + segurança
+```
 
 ## Fase -1 — Matemática básica para IA
 
@@ -85,14 +117,14 @@ from-zero-to-minigpt/
 - Jupyter Notebook
 - pytest
 
-### Etapas avançadas
+### Etapas avançadas planejadas
 
 - PyTorch
 - FastAPI
 - Docker
-- Modelos abertos e bibliotecas de tokenização
-- Bancos vetoriais
-- Ferramentas de avaliação de LLMs
+- modelos abertos e bibliotecas de tokenização
+- bancos vetoriais
+- ferramentas de avaliação de LLMs
 
 As primeiras implementações evitarão frameworks que escondam o cálculo dos gradientes. PyTorch será introduzido depois que os fundamentos forem implementados manualmente.
 
@@ -113,6 +145,25 @@ Executar código copiado não representa a conclusão de uma etapa.
 ## Projeto final
 
 O projeto final será um assistente técnico voltado para redes, infraestrutura ou cibersegurança. O sistema deverá combinar um modelo de linguagem com recuperação de documentação, ferramentas restritas, avaliações automatizadas, observabilidade e controles contra ataques como prompt injection.
+
+## O que este repositório demonstra
+
+Para quem estiver revisando o projeto como portfólio, os sinais principais que quero tornar visíveis são:
+
+- evolução matemática aplicada à IA;
+- implementação de fundamentos antes de abstrações de alto nível;
+- capacidade de transformar teoria em experimentos reproduzíveis;
+- criação de testes e critérios explícitos de conclusão;
+- análise de falhas e limitações, não apenas de casos que funcionam;
+- progressão de model internals para engenharia de sistemas com LLMs.
+
+## Status e honestidade técnica
+
+Este é um projeto **em andamento**. Itens do roadmap representam intenção de implementação, não funcionalidades já concluídas. O código, os testes e as notas de cada etapa são a evidência do que já foi realizado.
+
+## Documentação
+
+- [Technical Overview](docs/TECHNICAL_OVERVIEW.md) — visão de arquitetura, método de estudo, critérios de validação e direção técnica do projeto.
 
 ## Autor
 
