@@ -70,6 +70,10 @@ As primeiras fases evitam frameworks que escondam os cálculos fundamentais. PyT
 
 A pasta `.venv/` não é versionada. O ambiente deve ser reconstruído a partir dos arquivos de dependências, permitindo que cada máquina crie um ambiente compatível com seu próprio sistema operacional e arquitetura.
 
+## Validação automática
+
+O workflow `.github/workflows/tests.yml` executa a instalação das dependências e o `pytest` em um ambiente Linux limpo com Python 3.12 a cada push ou pull request para `main`. Isso funciona como validação contínua da receita de instalação do projeto.
+
 ## Check de sanidade
 
 O projeto inclui `tests/test_sanity.py` para validar que a infraestrutura de testes está operacional. O teste não representa lógica de IA; ele apenas comprova que o `pytest` consegue descobrir e executar testes com um único comando.
